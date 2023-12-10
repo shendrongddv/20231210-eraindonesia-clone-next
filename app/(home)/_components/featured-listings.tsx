@@ -1,13 +1,6 @@
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-
-const tags = Array.from({ length: 4 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`,
-);
+import { ListingItem } from "./listing-card";
 
 const fakeData = [
   {
@@ -47,21 +40,7 @@ const FeaturedListings = () => {
         </div>
 
         {/* Row */}
-        <ScrollArea className="w-full">
-          <div className="container flex overflow-hidden">
-            {fakeData.map((item) => (
-              <>
-                <div key={item.id} className="w-full shrink-0 px-4">
-                  <ListingItem {...item} />
-                </div>
-              </>
-            ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-
-        {/* Row */}
-        <ul className="scrollbar-thumb-rounded-full scrollbar-track-transparent scrollbar-thumb-transparent scrollbar-h-4 scrollbar-thin md:scrollbar-thumb-transparent hover:scrollbar-thumb-slate-200 container flex overflow-hidden overflow-x-scroll pb-4 transition-colors">
+        <ul className="scrollbar-none container flex overflow-hidden overflow-x-scroll">
           {fakeData?.map((item) => (
             <li
               key={item.id}
@@ -88,26 +67,3 @@ const FeaturedListings = () => {
 };
 
 export default FeaturedListings;
-
-type ListingItemProps = {
-  title: string;
-  image: string;
-  url: string;
-};
-
-const ListingItem = ({ title, image, url }: ListingItemProps) => {
-  return (
-    <div className="flex h-full w-full flex-col items-center gap-4 text-center">
-      <figure aria-hidden className="aspect-1 h-auto w-full overflow-hidden">
-        <Image
-          src={`/${image}`}
-          alt={title}
-          width={480}
-          height={480}
-          className="h-full w-auto object-cover"
-        />
-      </figure>
-      <span className="text-sm">{title}</span>
-    </div>
-  );
-};

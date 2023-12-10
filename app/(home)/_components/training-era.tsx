@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { ListingItem } from "./listing-card";
 
 const fakeData = [
   {
@@ -40,7 +40,7 @@ const fakeData = [
 const TrainingEra = () => {
   return (
     <section className="bg-slate-100 py-24">
-      <div className="container flex flex-col items-center gap-12 px-6">
+      <div className="container flex flex-col items-center gap-12 md:px-6">
         {/* Row */}
         <div className="flex w-full flex-col items-center gap-4 md:flex-row md:justify-between">
           <h2 className="text-2xl font-semibold">Training ERA</h2>
@@ -48,34 +48,16 @@ const TrainingEra = () => {
         </div>
 
         {/* Row */}
-        <ul className="grid w-full gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-4">
+        <ul className="scrollbar-none flex overflow-hidden overflow-x-scroll">
           {fakeData?.map((item) => (
-            <li key={item.id}>
-              <div className="grid gap-2">
-                {/* # */}
-                <figure aria-hidden className="aspect-1 w-full overflow-hidden">
-                  <Image
-                    src={`/${item.image}`}
-                    alt={item.title}
-                    width={480}
-                    height={480}
-                    className="h-full w-auto object-cover"
-                  />
-                </figure>
-
-                {/* # */}
-                <h3 className="mt-2 text-xs font-semibold text-foreground md:text-sm">
-                  {item.title}
-                </h3>
-
-                {/* # */}
-                <div className="flex items-center justify-between gap-2 text-xs">
-                  <span>{item.date}</span>
-                  <span>{item.time}</span>
-                </div>
-              </div>
+            <li
+              key={item.id}
+              className="h-full w-4/5 shrink-0 pl-4 sm:w-1/2 md:w-1/4"
+            >
+              <ListingItem {...item} />
             </li>
           ))}
+          <li className="pl-4"></li>
         </ul>
 
         {/* Row */}
