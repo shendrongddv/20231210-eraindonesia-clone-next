@@ -32,25 +32,24 @@ const fakeData = [
 
 const LatestEvents = () => {
   return (
-    <section className="bg-[#010812] py-24 text-white">
-      <div className="container flex flex-col items-center gap-12 md:px-6">
+    <section className="bg-[#010812] py-24 text-white md:px-4">
+      <div className="container flex flex-col items-center gap-8">
         {/* Row */}
-        <div className="flex w-full flex-col items-center gap-4 md:flex-row md:justify-between">
+        <div className="flex w-full items-center justify-between gap-4 max-md:px-4">
           <h2 className="text-2xl font-semibold">Video ERA</h2>
-          <span>Search</span>
         </div>
 
         {/* Row */}
-        <ul className="scrollbar-none flex overflow-hidden overflow-x-scroll">
+        <ul className="scrollbar-none container flex overflow-hidden overflow-x-scroll sm:gap-6 md:gap-8">
           {fakeData?.map((item) => (
             <li
               key={item.id}
-              className="h-full w-4/5 shrink-0 pl-4 sm:w-1/2 md:w-1/4"
+              className="h-full w-4/5 shrink-0 max-md:pl-4 sm:w-1/2 md:flex-1"
             >
               <ListingItem {...item} />
             </li>
           ))}
-          <li className="pl-4"></li>
+          <li className="flex pl-4 md:hidden"></li>
         </ul>
 
         {/* Row */}

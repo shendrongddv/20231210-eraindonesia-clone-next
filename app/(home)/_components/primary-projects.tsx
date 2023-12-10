@@ -20,7 +20,7 @@ const fakeData = [
 const PrimaryProjects = () => {
   return (
     <section className="py-24">
-      <div className="container flex flex-col items-center gap-12 px-6">
+      <div className="container flex flex-col items-center gap-12 px-4">
         {/* Row */}
         <div className="flex w-full flex-col items-center gap-4 md:flex-row md:justify-between">
           <h2 className="text-2xl font-semibold">Primary Projects</h2>

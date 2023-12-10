@@ -2,12 +2,9 @@ import Image from "next/image";
 
 const WhyUs = () => {
   return (
-    <section className="bg-[#010812] px-6 pb-12">
-      <div className="container">
-        <figure
-          aria-hidden
-          className="w-full overflow-hidden rounded-md md:rounded-2xl"
-        >
+    <section className="bg-gradient-to-b from-slate-100 from-50% to-[#010812] to-50% px-4">
+      <div className="container overflow-hidden rounded-xl shadow-lg md:rounded-2xl">
+        <figure aria-hidden className="w-full">
           <Image
             src="/why_era.webp"
             alt="Image"

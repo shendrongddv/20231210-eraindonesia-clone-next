@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#8d1638] to-[#a21a36] pt-24 text-sm text-white">
-      <div className="container space-y-16 px-6">
+    <footer className="bg-gradient-to-br from-[#8d1638] to-[#a21a36] px-4 pt-24 text-sm text-white">
+      <div className="container space-y-16">
         {/* RowMain */}
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           {/* Col */}
@@ -16,8 +16,8 @@ const Footer = () => {
                 aria-hidden
                 src="/logo-white.png"
                 alt="Era Indonesia"
-                width={512}
-                height={422}
+                width={422}
+                height={512}
                 className="h-16 w-auto"
               />
             </Link>

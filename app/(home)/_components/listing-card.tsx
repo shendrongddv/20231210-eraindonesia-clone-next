@@ -9,7 +9,10 @@ type ListingItemProps = {
 export const ListingItem = ({ title, image, url }: ListingItemProps) => {
   return (
     <div className="flex h-full w-full flex-col items-center gap-4 text-center">
-      <figure aria-hidden className="aspect-1 h-auto w-full overflow-hidden">
+      <figure
+        aria-hidden
+        className="aspect-1 h-auto w-full overflow-hidden rounded-xl"
+      >
         <Image
           src={`/${image}`}
           alt={title}

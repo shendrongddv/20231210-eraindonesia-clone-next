@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Networks = () => {
   return (
-    <section className="bg-[#010812]">
+    <section className="bg-[#010812] px-4 pt-12">
       <div className="container">
         <figure aria-hidden className="w-full">
           <Image

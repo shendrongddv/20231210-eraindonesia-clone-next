@@ -1,7 +1,7 @@
 const BankPartners = () => {
   return (
     <section className="bg-slate-100 py-24">
-      <div className="container px-6">
+      <div className="container px-4">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           {/* Col */}
           <div className="flex flex-col items-center gap-3 text-center md:w-4/12 md:items-start md:text-start">
