@@ -26,7 +26,7 @@ const TopBroker = () => {
                 <span className="text-2xl font-bold">Top of The Month</span>
                 <span className="text-sm opacity-90">November 2023</span>
                 <span className="mt-2 text-lg font-semibold">
-                  Marketing Associate
+                  Member Broker
                 </span>
                 <span className="text-xs opacity-90">#National</span>
               </div>

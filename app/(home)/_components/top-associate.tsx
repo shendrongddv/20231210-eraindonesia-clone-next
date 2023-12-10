@@ -5,9 +5,9 @@ const TopAssociate = () => {
     <section className="bg-slate-100 px-4 py-24">
       <div className="container">
         {/* Row */}
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between md:gap-12">
+        <div className="grid gap-8 md:grid-cols-4 md:gap-12">
           {/* Col */}
-          <div className="space-y-8 rounded-xl bg-gradient-to-br from-[#8d1638] to-[#a21a36] p-8 text-white md:w-3/12 md:rounded-2xl">
+          <div className="space-y-8 rounded-xl bg-gradient-to-br from-[#8d1638] to-[#a21a36]  p-8 text-white md:rounded-2xl">
             {/* # */}
             <div className="">
               {/* ## */}
@@ -61,17 +61,17 @@ const TopAssociate = () => {
           </div>
 
           {/* Col */}
-          <div className="md:w-9/12">
+          <div className="flex items-center md:col-span-3">
             <ul className="grid w-full grid-cols-3 gap-4 md:gap-8">
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
+              <UserCard2 />
             </ul>
           </div>
         </div>
@@ -81,6 +81,44 @@ const TopAssociate = () => {
 };
 
 export default TopAssociate;
+
+const UserCard2 = () => {
+  return (
+    <li className="flex flex-col items-center gap-2 md:flex-row">
+      {/* # */}
+      <span className="text-[10px] font-semibold leading-snug text-destructive md:hidden md:text-xs">
+        South Jakarta
+      </span>
+
+      {/* # */}
+      <figure
+        aria-hidden
+        className="mb-2 h-20 w-auto shrink-0 overflow-hidden rounded-full border-2 border-white shadow-lg md:h-20"
+      >
+        <Image
+          src="/user.jpg"
+          alt="Image"
+          width={120}
+          height={120}
+          className="h-full w-auto"
+        />
+      </figure>
+
+      {/* # */}
+      <div className="flex flex-col items-center gap-1 text-center md:items-start md:text-start">
+        <span className="hidden text-[10px] font-semibold leading-snug text-destructive md:flex md:text-xs">
+          South Jakarta
+        </span>
+        <span className="text-xs font-semibold leading-snug md:text-sm">
+          Era Fiesta Gading Serpong
+        </span>
+        <span className="text-[10px] font-semibold leading-snug opacity-80 md:text-xs">
+          Reyza Mandliko Mikajeva
+        </span>
+      </div>
+    </li>
+  );
+};
 
 const UserCard = () => {
   return (
