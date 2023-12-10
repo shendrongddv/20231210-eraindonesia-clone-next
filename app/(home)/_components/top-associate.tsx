@@ -7,7 +7,7 @@ const TopAssociate = () => {
         {/* Row */}
         <div className="grid gap-8 md:grid-cols-4 md:gap-12">
           {/* Col */}
-          <div className="space-y-8 rounded-xl bg-gradient-to-br from-[#8d1638] to-[#a21a36]  p-8 text-white md:rounded-2xl">
+          <div className="space-y-8 rounded-xl bg-gradient-to-br from-[#8d1638] to-[#a21a36] p-8 text-white md:rounded-2xl">
             {/* # */}
             <div className="">
               {/* ## */}

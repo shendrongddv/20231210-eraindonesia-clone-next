@@ -43,7 +43,16 @@ const TrainingEra = () => {
       <div className="container flex flex-col items-center gap-8">
         {/* Row */}
         <div className="flex w-full items-center justify-between gap-4 max-md:px-4">
-          <h2 className="text-2xl font-semibold">Training ERA</h2>
+          <h2 className="text-2xl font-semibold">ERA Class</h2>
+
+          <Link
+            href="/"
+            aria-label="Lihat Lainnya"
+            className="hidden items-center justify-center gap-2 text-center text-sm font-medium underline underline-offset-4 md:flex"
+          >
+            Lihat Lainnya
+            <ChevronRight className="h-4 w-4" />
+          </Link>
         </div>
 
         {/* Row */}
@@ -62,10 +71,10 @@ const TrainingEra = () => {
         {/* Row */}
         <Link
           href="/"
-          aria-label="Lebih Banyak"
-          className="flex items-center justify-center gap-2 text-center text-sm font-medium underline underline-offset-4"
+          aria-label="Lihat Lainnya"
+          className="flex items-center justify-center gap-2 text-center text-sm font-medium underline underline-offset-4 md:hidden"
         >
-          Lebih Banyak
+          Lihat Lainnya
           <ChevronRight className="h-4 w-4" />
         </Link>
       </div>

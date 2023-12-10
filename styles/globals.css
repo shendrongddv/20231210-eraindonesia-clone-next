@@ -81,6 +81,14 @@ body,
   }
 }
 
+.bg-blue {
+  @apply bg-gradient-to-br from-[#4449b3] to-[#000104];
+}
+
+.bg-red {
+  @apply bg-gradient-to-br from-[#8d1638] to-[#a21a36];
+}
+
 /* Typography */
 @import "./typography.css";
 

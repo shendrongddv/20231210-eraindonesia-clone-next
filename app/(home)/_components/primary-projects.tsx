@@ -19,42 +19,42 @@ const fakeData = [
 
 const PrimaryProjects = () => {
   return (
-    <section className="py-24">
-      <div className="container flex flex-col items-center gap-12 px-4">
+    <section className="py-24 md:px-4">
+      <div className="container flex flex-col items-center gap-8">
         {/* Row */}
-        <div className="flex w-full flex-col items-center gap-4 md:flex-row md:justify-between">
+        <div className="flex w-full items-center justify-between gap-4 max-md:px-4">
           <h2 className="text-2xl font-semibold">Primary Projects</h2>
-          <span>Search</span>
+
+          <Link
+            href="/"
+            aria-label="Lihat Lainnya"
+            className="hidden items-center justify-center gap-2 text-center text-sm font-medium underline underline-offset-4 md:flex"
+          >
+            Lihat Lainnya
+            <ChevronRight className="h-4 w-4" />
+          </Link>
         </div>
 
         {/* Row */}
-        <ul className="grid w-full gap-6 sm:grid-cols-2 sm:gap-8">
+        <ul className="scrollbar-none container flex overflow-hidden overflow-x-scroll sm:gap-6 md:gap-8">
           {fakeData?.map((item) => (
             <li
               key={item.id}
-              className="flex flex-col items-center gap-4 text-center"
+              className="h-full w-4/5 shrink-0 max-md:pl-4 sm:w-1/2 md:flex-1"
             >
-              <figure aria-hidden className="h-auto w-full overflow-hidden">
-                <Image
-                  src={`/${item.image}`}
-                  alt={item.title}
-                  width={480}
-                  height={480}
-                  className="h-full w-auto object-cover"
-                />
-              </figure>
-              <span className="text-sm">{item.title}</span>
+              <div></div>
             </li>
           ))}
+          <li className="flex pl-4 md:hidden"></li>
         </ul>
 
         {/* Row */}
         <Link
           href="/"
-          aria-label="Lebih Banyak"
-          className="flex items-center justify-center gap-2 text-center text-sm font-medium underline underline-offset-4"
+          aria-label="Lihat Lainnya"
+          className="flex items-center justify-center gap-2 text-center text-sm font-medium underline underline-offset-4 md:hidden"
         >
-          Lebih Banyak
+          Lihat Lainnya
           <ChevronRight className="h-4 w-4" />
         </Link>
       </div>
