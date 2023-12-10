@@ -7,6 +7,7 @@ import PrimaryProjects from "./_components/primary-projects";
 import BankPartners from "./_components/bank-partners";
 import Networks from "./_components/networks";
 import WhyUs from "./_components/why-us";
+import TopAssociate from "./_components/top-associate";
 
 export default function HomePage() {
   return (
@@ -25,7 +26,8 @@ export default function HomePage() {
 
       {/* NationalRank */}
 
-      {/* RegionalRank */}
+      {/* TopAssociate */}
+      <TopAssociate />
 
       {/* WhyUs */}
       <WhyUs />

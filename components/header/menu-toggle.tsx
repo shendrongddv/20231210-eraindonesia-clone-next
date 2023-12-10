@@ -18,6 +18,7 @@ export const MenuToggle = () => {
     <Sheet>
       <SheetTrigger
         asChild
+        aria-label="Togglr Menu"
         className="flex cursor-pointer text-white md:hidden"
       >
         <Menu className="h-6 w-6" />
